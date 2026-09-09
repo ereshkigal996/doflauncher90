@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "product": "MySQL Community Server",
+  "version": "8.4.10",
+  "platform": "winx64",
+  "archiveSha256": "3B950DB31C33FB59252568C012BD9EE5FAC50811E778CA7C8F1A0DC91686CD6F",
+  "installedAt": "2026-08-27T21:56:34.7347639Z"
+}

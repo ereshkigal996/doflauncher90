@@ -1,0 +1,27 @@
+{
+    "launcher": {
+        "server_type": "go",
+        "go_server_path": "C:\\Users\\56518\\Downloads\\DNF90-external-oneclick",
+        "python_server_path": "",
+        "client_path": "C:\\Users\\56518\\Downloads\\DNF_90S6A1",
+        "last_account": "qwe123456",
+        "window_geometry": null,
+        "settings": {
+            "auto_start_server": true,
+            "auto_close_after_login": false,
+            "theme": "dark"
+        },
+        "auto_backup_on_stop": true
+    },
+    "gmtool": {
+        "server_path": "C:\\Users\\56518\\Downloads\\DNF90-external-oneclick",
+        "client_path": "C:\\Users\\56518\\Downloads\\DNF_90S6A1",
+        "pvf_path": "",
+        "db_mode": "mysql",
+        "settings": {},
+        "presets": {
+            "gold_direction": "add",
+            "cera_direction": "add"
+        }
+    }
+}

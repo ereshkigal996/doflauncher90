@@ -1,0 +1,27 @@
+﻿# 临时文件
+*.tmp
+*.log
+temp/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# 打包中间文件
+build/
+*.spec.bak
+
+# 系统文件
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 大文件（可选，根据需要调整）
+# release/DNFLauncher_3.0/lib/
+# release/DNFLauncher_3.0/module/lib/

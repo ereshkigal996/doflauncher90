@@ -1,0 +1,413 @@
+Command 'cd "C:\Users\56518\Downloads\doubao_work\pip"
+python query_latest_mail_data.py' exited with code 0. stdout: === 最新的邮件（前3条）===
+{
+  "character_id": "4",
+  "mail_id": "15",
+  "sender_character_id": "0",
+  "sender_name": "系统",
+  "recipient_character_id": "4",
+  "recipient_name": "测试专用",
+  "title": "GM 物品发放",
+  "body": "系统发放：欧格罗斯的生命肩甲（100160526）",
+  "gold": 0,
+  "read_flag": 1,
+  "claimed_flag": 1,
+  "deleted_flag": 1,
+  "created_at": "2026-09-02 16:51:39",
+  "expire_at": null
+}
+
+{
+  "character_id": "4",
+  "mail_id": "14",
+  "sender_character_id": "0",
+  "sender_name": "系统",
+  "recipient_character_id": "4",
+  "recipient_name": "测试专用",
+  "title": "GM 物品发放",
+  "body": "系统发放：圣耀救赎光剑（101040493）",
+  "gold": 0,
+  "read_flag": 1,
+  "claimed_flag": 1,
+  "deleted_flag": 1,
+  "created_at": "2026-09-02 16:50:43",
+  "expire_at": null
+}
+
+{
+  "character_id": "4",
+  "mail_id": "13",
+  "sender_character_id": "0",
+  "sender_name": "系统",
+  "recipient_character_id": "4",
+  "recipient_name": "测试专用",
+  "title": "GM 物品发放",
+  "body": "系统发放：兔女郎与执事装扮礼包[女鬼剑士]5（2024013035）",
+  "gold": 0,
+  "read_flag": 1,
+  "claimed_flag": 1,
+  "deleted_flag": 1,
+  "created_at": "2026-09-02 16:41:33",
+  "expire_at": null
+}
+
+=== 最新的邮件附件（前3条）===
+{
+  "character_id": "gm",
+  "mail_id": "gm_1788300128304_2323",
+  "attachment_index": 0,
+  "item_id": 2683816,
+  "item_count": 1,
+  "bind_flag": 1,
+  "expire_at": null,
+  "raw_entry": null
+}
+
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "item_id": 101040493,
+  "item_count": 1,
+  "bind_flag": 0,
+  "expire_at": null,
+  "raw_entry": "<binary data, length=119>",
+  "raw_entry_hex": "09006dc10506b993562400300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+}
+
+=== 最新的邮件附件extra数据（前20条）===
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "extra_key": "upgrade_level",
+  "extra_value": "0"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "extra_key": "source",
+  "extra_value": "gm_admin_system_mail"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "extra_key": "reinforce",
+  "extra_value": "0"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "extra_key": "quality_seed",
+  "extra_value": "609653689"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "extra_key": "pvf_path",
+  "extra_value": "equipment/character/swordman/weapon/beamsword/101040493.equ"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "extra_key": "packed_flag_byte",
+  "extra_value": "0"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "extra_key": "max_durability",
+  "extra_value": "48"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "extra_key": "mailbox_pvf_path",
+  "extra_value": "equipment/character/swordman/weapon/beamsword/101040493.equ"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "extra_key": "mailbox_pvf_kind",
+  "extra_value": "equipment"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "extra_key": "mailbox_equipment_type",
+  "extra_value": "[weapon]"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "extra_key": "last_grant_source",
+  "extra_value": "gm_admin_system_mail"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "extra_key": "item_kind",
+  "extra_value": "equipment"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "extra_key": "ext_data0",
+  "extra_value": "0"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "extra_key": "equipment_type",
+  "extra_value": "[weapon]"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "attachment_index": 0,
+  "extra_key": "durability",
+  "extra_value": "48"
+}
+
+=== 最新的邮件元数据（前10条）===
+{
+  "character_id": "4",
+  "mail_id": "9",
+  "metadata_key": "system_mail",
+  "metadata_value": "true"
+}
+{
+  "character_id": "4",
+  "mail_id": "9",
+  "metadata_key": "source",
+  "metadata_value": "gm_admin_system_mail"
+}
+{
+  "character_id": "4",
+  "mail_id": "8",
+  "metadata_key": "system_mail",
+  "metadata_value": "true"
+}
+{
+  "character_id": "4",
+  "mail_id": "8",
+  "metadata_key": "source",
+  "metadata_value": "gm_admin_system_mail"
+}
+{
+  "character_id": "4",
+  "mail_id": "7",
+  "metadata_key": "system_mail",
+  "metadata_value": "true"
+}
+{
+  "character_id": "4",
+  "mail_id": "7",
+  "metadata_key": "source",
+  "metadata_value": "gm_admin_system_mail"
+}
+{
+  "character_id": "4",
+  "mail_id": "6",
+  "metadata_key": "system_mail",
+  "metadata_value": "true"
+}
+{
+  "character_id": "4",
+  "mail_id": "6",
+  "metadata_key": "source",
+  "metadata_value": "gm_admin_system_mail"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "metadata_key": "unlimited",
+  "metadata_value": "true"
+}
+{
+  "character_id": "4",
+  "mail_id": "18",
+  "metadata_key": "system_mail",
+  "metadata_value": "true"
+}
+
+=== 最新的背包装备（前3条）===
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335678218_3674",
+  "item_id": 101040493,
+  "item_count": 1,
+  "bind_flag": 1,
+  "expire_at": null,
+  "raw_entry": "<binary data, length=119>",
+  "raw_entry_hex": "00006dc1050600000000002d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+}
+
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335297842_7272",
+  "item_id": 101040493,
+  "item_count": 1,
+  "bind_flag": 1,
+  "expire_at": null,
+  "raw_entry": "<binary data, length=119>",
+  "raw_entry_hex": "00006dc1050600000000002d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+}
+
+=== 最新的背包装备extra数据（前20条）===
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335678218_3674",
+  "extra_key": "upgrade_level",
+  "extra_value": "10"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335678218_3674",
+  "extra_key": "trade_locked_by_first_equip",
+  "extra_value": "1"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335678218_3674",
+  "extra_key": "seal_removed_by_first_equip",
+  "extra_value": "1"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335678218_3674",
+  "extra_key": "reinforce",
+  "extra_value": "10"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335678218_3674",
+  "extra_key": "pvf_path",
+  "extra_value": "equipment/character/swordman/weapon/beamsword/101040493.equ"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335678218_3674",
+  "extra_key": "max_durability",
+  "extra_value": "45"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335678218_3674",
+  "extra_key": "item_kind",
+  "extra_value": "equipment"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335678218_3674",
+  "extra_key": "equipment_type",
+  "extra_value": "[weapon]"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335678218_3674",
+  "extra_key": "durability",
+  "extra_value": "45"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335678218_3674",
+  "extra_key": "amplify_value",
+  "extra_value": "10"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335678218_3674",
+  "extra_key": "amplify_type",
+  "extra_value": "1"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335678218_3674",
+  "extra_key": "amplification_value",
+  "extra_value": "10"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335678218_3674",
+  "extra_key": "amplification_type",
+  "extra_value": "1"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335297842_7272",
+  "extra_key": "upgrade_level",
+  "extra_value": "11"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335297842_7272",
+  "extra_key": "trade_locked_by_first_equip",
+  "extra_value": "1"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335297842_7272",
+  "extra_key": "seal_removed_by_first_equip",
+  "extra_value": "1"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335297842_7272",
+  "extra_key": "reinforce",
+  "extra_value": "11"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335297842_7272",
+  "extra_key": "pvf_path",
+  "extra_value": "equipment/character/swordman/weapon/beamsword/101040493.equ"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335297842_7272",
+  "extra_key": "max_durability",
+  "extra_value": "45"
+}
+{
+  "character_id": "4",
+  "collection_name": "inventory",
+  "entry_key": "gm_1788335297842_7272",
+  "extra_key": "item_kind",
+  "extra_value": "equipment"
+}
+

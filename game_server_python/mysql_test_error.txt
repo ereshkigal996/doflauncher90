@@ -1,0 +1,11 @@
+mysqld: Can't open shared library 'C:\Users\56518\Downloads\DBObject\game_server_release\mysql\server\lib\plugin\component_reference_cache.dll' (errno: 126 找不到指定的模块。)
+mysqld: Cannot load component from specified URN: 'file://component_reference_cache'.
+2026-09-04T11:53:03.286113Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2026-09-04T11:53:03.455711Z 0 [System] [MY-010116] [Server] C:\Users\56518\Downloads\DBObject\game_server_release\mysql\server\bin\mysqld.exe (mysqld 8.4.10) starting as process 23352
+2026-09-04T11:53:03.483551Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-09-04T11:53:03.753901Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-09-04T11:53:04.201884Z 0 [Warning] [MY-013829] [Server] Missing data directory for ICU regular expressions: C:\Users\56518\Downloads\DBObject\game_server_release\mysql\server\lib\private\.
+2026-09-04T11:53:04.211464Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-09-04T11:53:04.211594Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-09-04T11:53:04.230469Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2026-09-04T11:53:04.230529Z 0 [System] [MY-010931] [Server] C:\Users\56518\Downloads\DBObject\game_server_release\mysql\server\bin\mysqld.exe: ready for connections. Version: '8.4.10'  socket: ''  port: 13306  MySQL Community Server - GPL.

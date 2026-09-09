@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>DNF轮回启动器 3.0 设计原型</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a1a;
+    font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #e0e0e0;
+  }
+
+  /* ===== 主窗口 ===== */
+  .window {
+    width: 960px;
+    height: 600px;
+    background: #202020;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    border: 1px solid #333;
+  }
+
+  /* ===== 左侧侧边栏 ===== */
+  .sidebar {
+    width: 200px;
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #2a2a2a;
+  }
+  .sidebar-logo {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid #2a2a2a;
+  }
+  .sidebar-logo .icon {
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, #0078d4, #00bcf2);
+    border-radius: 6px;
+    margin-right: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: bold; color: #fff;
+  }
+  .sidebar-logo .name { font-size: 14px; font-weight: 600; color: #fff; }
+
+  .nav { flex: 1; padding: 12px 10px; }
+  .nav-item {
+    display: flex; align-items: center;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #a0a0a0;
+    transition: all 0.15s;
+  }
+  .nav-item:hover { background: #252525; color: #e0e0e0; }
+  .nav-item.active {
+    background: rgba(0,120,212,0.15);
+    color: #4da6ff;
+  }
+  .nav-item .nav-icon {
+    width: 18px; height: 18px;
+    margin-right: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+  }
+
+  .sidebar-footer {
+    padding: 14px 16px;
+    border-top: 1px solid #2a2a2a;
+    font-size: 11px;
+    color: #555;
+  }
+  .sidebar-footer .version { color: #666; }
+
+  /* ===== 右侧主内容区 ===== */
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 顶部标题栏 */
+  .topbar {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom: 1px solid #2a2a2a;
+    background: #1e1e1e;
+  }
+  .topbar .title { font-size: 16px; font-weight: 600; color: #fff; }
+  .topbar .spacer { flex: 1; }
+  .server-status {
+    display: flex; align-items: center;
+    font-size: 12px; color: #888;
+    margin-right: 16px;
+  }
+  .status-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #4caf50;
+    margin-right: 6px;
+    box-shadow: 0 0 6px rgba(76,175,80,0.5);
+  }
+  .status-dot.offline { background: #666; box-shadow: none; }
+
+  .icon-btn {
+    width: 32px; height: 32px;
+    border-radius: 6px;
+    background: transparent;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    transition: all 0.15s;
+  }
+  .icon-btn:hover { background: #2a2a2a; color: #e0e0e0; }
+
+  /* 内容区 */
+  .content {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    display: flex;
+    gap: 20px;
+  }
+
+  /* ===== 首页：左登录区 + 右操作区 ===== */
+  .login-panel {
+    width: 340px;
+    background: #252525;
+    border-radius: 10px;
+    padding: 28px 24px;
+    border: 1px solid #303030;
+  }
+  .login-panel h2 {
+    font-size: 18px; font-weight: 600; color: #fff;
+    margin-bottom: 4px;
+  }
+  .login-panel .subtitle {
+    font-size: 12px; color: #777;
+    margin-bottom: 24px;
+  }
+
+  .form-group { margin-bottom: 16px; }
+  .form-group label {
+    display: block;
+    font-size: 12px; color: #999;
+    margin-bottom: 6px;
+  }
+  .form-group input {
+    width: 100%;
+    height: 38px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 0 12px;
+    color: #e0e0e0;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .form-group input:focus { border-color: #0078d4; }
+
+  .btn-row {
+    display: flex; gap: 10px;
+    margin-top: 20px;
+  }
+  .btn {
+    flex: 1;
+    height: 38px;
+    border-radius: 6px;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-primary {
+    background: #0078d4;
+    color: #fff;
+  }
+  .btn-primary:hover { background: #106ebe; }
+  .btn-secondary {
+    background: #333;
+    color: #ccc;
+  }
+  .btn-secondary:hover { background: #3d3d3d; }
+
+  /* 右侧操作区 */
+  .action-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card {
+    background: #252525;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #303030;
+  }
+  .card-title {
+    font-size: 13px; font-weight: 600; color: #aaa;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .server-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .server-info .server-icon {
+    width: 40px; height: 40px;
+    background: rgba(0,120,212,0.15);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+  .server-info .server-name { font-size: 14px; font-weight: 600; color: #fff; }
+  .server-info .server-type { font-size: 11px; color: #777; }
+
+  .quick-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .quick-btn {
+    height: 44px;
+    background: #2a2a2a;
+    border: 1px solid #353535;
+    border-radius: 8px;
+    color: #ccc;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px;
+    transition: all 0.15s;
+  }
+  .quick-btn:hover {
+    background: #303030;
+    border-color: #0078d4;
+    color: #fff;
+  }
+  .quick-btn .q-icon { font-size: 14px; }
+
+  /* 日志预览卡片 */
+  .log-preview {
+    flex: 1;
+    min-height: 0;
+  }
+  .log-content {
+    font-family: "Consolas", monospace;
+    font-size: 11px;
+    color: #666;
+    line-height: 1.8;
+    max-height: 120px;
+    overflow: hidden;
+  }
+  .log-content .time { color: #555; }
+  .log-content .info { color: #4da6ff; }
+  .log-content .success { color: #4caf50; }
+
+  /* ===== 标注 ===== */
+  .annotation {
+    position: absolute;
+    background: rgba(0,120,212,0.9);
+    color: #fff;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="window" style="position:relative;">
+  <!-- 左侧侧边栏 -->
+  <div class="sidebar">
+    <div class="sidebar-logo">
+      <div class="icon">D</div>
+      <div class="name">轮回启动器</div>
+    </div>
+    <div class="nav">
+      <div class="nav-item active">
+        <span class="nav-icon">🏠</span>首页
+      </div>
+      <div class="nav-item">
+        <span class="nav-icon">💾</span>存档管理
+      </div>
+      <div class="nav-item">
+        <span class="nav-icon">📋</span>操作日志
+      </div>
+      <div class="nav-item">
+        <span class="nav-icon">⚙️</span>服务端设置
+      </div>
+    </div>
+    <div class="sidebar-footer">
+      <div>DNF轮回启动器</div>
+      <div class="version">v3.0.0 · release</div>
+    </div>
+  </div>
+
+  <!-- 右侧主内容 -->
+  <div class="main">
+    <div class="topbar">
+      <div class="title">首页</div>
+      <div class="spacer"></div>
+      <div class="server-status">
+        <div class="status-dot"></div>
+        服务端运行中
+      </div>
+      <button class="icon-btn" title="设置">⚙</button>
+      <button class="icon-btn" title="最小化">—</button>
+      <button class="icon-btn" title="关闭">✕</button>
+    </div>
+
+    <div class="content">
+      <!-- 左：登录面板 -->
+      <div class="login-panel">
+        <h2>账号登录</h2>
+        <div class="subtitle">输入账号密码启动游戏</div>
+
+        <div class="form-group">
+          <label>账号</label>
+          <input type="text" placeholder="请输入账号" value="qwe123456">
+        </div>
+        <div class="form-group">
+          <label>密码</label>
+          <input type="password" placeholder="请输入密码" value="********">
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-secondary">注册</button>
+          <button class="btn btn-primary">登录</button>
+        </div>
+      </div>
+
+      <!-- 右：操作面板 -->
+      <div class="action-panel">
+        <!-- 服务端状态卡片 -->
+        <div class="card">
+          <div class="card-title">服务端状态</div>
+          <div class="server-info">
+            <div class="server-icon">🖥</div>
+            <div>
+              <div class="server-name">第三方服务端</div>
+              <div class="server-type">MySQL · 192.168.18.7</div>
+            </div>
+          </div>
+          <div class="quick-actions">
+            <button class="quick-btn"><span class="q-icon">▶</span>启动服务</button>
+            <button class="quick-btn"><span class="q-icon">⏹</span>停止服务</button>
+            <button class="quick-btn"><span class="q-icon">🔄</span>重启服务</button>
+            <button class="quick-btn"><span class="q-icon">🛠</span>GM工具</button>
+          </div>
+        </div>
+
+        <!-- 日志预览卡片 -->
+        <div class="card log-preview">
+          <div class="card-title">最近操作</div>
+          <div class="log-content">
+            <div><span class="time">[08:30:12]</span> <span class="info">系统就绪，等待操作...</span></div>
+            <div><span class="time">[08:30:15]</span> <span class="success">服务端启动成功</span></div>
+            <div><span class="time">[08:31:02]</span> <span class="info">账号 qwe123456 登录成功</span></div>
+            <div><span class="time">[08:31:05]</span> <span class="success">游戏启动成功</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

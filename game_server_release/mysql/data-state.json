@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "installationId": "inst_a943cb30dafea23dfd939a85e104dd6a",
+  "phase": "ready",
+  "dataDirectory": "mysql/data",
+  "mysqldSha256": "3CBF20F0AFAB5BD1F282A3937D50544F2FE50D4AEE7F7C54F4961B4C4C9F14A3",
+  "autoCnfSha256": "0D80E2557DA20C4DBE168EFAF2AF85E6ED54A18427F0273FDC40372BE9BCF648",
+  "database": "dnf_local",
+  "initializedAt": "2026-08-27T21:56:43.0483655Z",
+  "readyAt": "2026-08-27T21:56:47.5885544Z"
+}

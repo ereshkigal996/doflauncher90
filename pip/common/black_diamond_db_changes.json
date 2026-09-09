@@ -1,0 +1,32 @@
+{
+  "dnf_accounts": {
+    "added": [],
+    "modified": [
+      {
+        "primary_key": "dnf:43ca6920ecea925361055c8e9463fd15",
+        "modified_fields": {
+          "updated_at": {
+            "before": "2026-09-02 07:25:22.278831",
+            "after": "2026-09-02 07:37:00.088004"
+          }
+        }
+      }
+    ],
+    "deleted": []
+  },
+  "dnf_characters": {
+    "added": [],
+    "modified": [
+      {
+        "primary_key": "1",
+        "modified_fields": {
+          "updated_at": {
+            "before": "2026-09-02 07:25:22.278831",
+            "after": "2026-09-02 07:37:00.088004"
+          }
+        }
+      }
+    ],
+    "deleted": []
+  }
+}
