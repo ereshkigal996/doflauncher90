@@ -9,8 +9,14 @@ gitee_repo/
 github_publish/
 history/
 
-# 服务端发布目录（可选，根据需要决定）
+# 服务端发布目录
 game_server_release/
+
+# 发行目录（不上传）
+release/
+
+# 安装包（不上传）
+*.exe
 
 # 临时文件
 *.tmp
