@@ -1,65 +1,39 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
+﻿# 源码目录（不上传，闭源项目）
+pip/
+game_server_python/
+DNF_pvf_python/
+_archive/
+temp/
+tools/
+gitee_repo/
+github_publish/
+history/
 
-# PyInstaller
-*.spec
-*.manifest
+# 服务端发布目录
+game_server_release/
+
+# 发行目录（不上传，只上传最终安装包）
+release/
+
+# 临时文件
+*.tmp
+*.log
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# 打包中间文件
 build/
-dist/
+*.spec.bak
+
+# 系统文件
+Thumbs.db
+desktop.ini
+.DS_Store
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
-
-# OS
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# 临时文件
-*.tmp
-*.log
-*.bak
-*.old
-
-# 配置文件（包含用户数据）
-config/config.lau
-config/accounts.dat
-module/config/*.lau
-
-# 备份数据
-backup/
-*.backup
-
-# 构建产物
-*.exe
-*.msi
-*.zip
-*.7z
-*.rar
-
-# 发布目录
-release/
-github_publish/
