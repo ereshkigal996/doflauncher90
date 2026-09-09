@@ -1,4 +1,4 @@
-﻿# 源码目录（不上传）
+﻿# 源码目录（不上传，闭源项目）
 pip/
 game_server_python/
 DNF_pvf_python/
@@ -12,11 +12,8 @@ history/
 # 服务端发布目录
 game_server_release/
 
-# 发行目录（不上传）
+# 发行目录（不上传，只上传最终安装包）
 release/
-
-# 安装包（不上传）
-*.exe
 
 # 临时文件
 *.tmp
