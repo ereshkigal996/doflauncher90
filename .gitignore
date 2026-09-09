@@ -1,7 +1,20 @@
-﻿# 临时文件
+﻿# 源码目录（不上传）
+pip/
+game_server_python/
+DNF_pvf_python/
+_archive/
+temp/
+tools/
+gitee_repo/
+github_publish/
+history/
+
+# 服务端发布目录（可选，根据需要决定）
+game_server_release/
+
+# 临时文件
 *.tmp
 *.log
-temp/
 *.pyc
 __pycache__/
 *.pyo
@@ -21,7 +34,3 @@ desktop.ini
 .idea/
 *.swp
 *.swo
-
-# 大文件（可选，根据需要调整）
-# release/DNFLauncher_3.0/lib/
-# release/DNFLauncher_3.0/module/lib/

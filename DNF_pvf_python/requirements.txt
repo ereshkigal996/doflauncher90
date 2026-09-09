@@ -1,8 +1,0 @@
-mysql-connector
-zhconv
-pymysql
-pyperclip
-pyqrcode
-paramiko
-ttkbootstrap
-pycrypto
