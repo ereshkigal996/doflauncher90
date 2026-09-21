@@ -1,2 +1,2 @@
 3.3.9
-涓€閿崌绾?exe
+updater_mini.exe
